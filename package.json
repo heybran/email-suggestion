@@ -1,0 +1,26 @@
+{
+  "name": "email-suggestion",
+  "version": "1.0.0",
+  "description": "A web component to improves user experience by reducing typos and suggesting valid email addresses.",
+  "main": "email-suggestion.js",
+  "scripts": {
+    "start": "npx http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heybran/email-suggestion.git"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/heybran/email-suggestion/issues"
+  },
+  "author": {
+    "name": "Brandon Zhang",
+    "email": "gwonzhang@gmail.com",
+    "url": "https://heybran.cn/"
+  },
+  "homepage": "https://github.com/heybran/email-suggestion#readme"
+}

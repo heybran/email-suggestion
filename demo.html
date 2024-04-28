@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<title>Email Suggestion web component</title>
+		<style>
+		</style>
+		<script type="module" src="./email-suggestion.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Email Suggestion component</h1>
+		</header>
+		<main>
+			<p>A web component to improves user experience by reducing typos and suggesting valid email addresses.</p>
+			<div class="demo-layout">
+			<form method="post">
+				<email-suggestion data-domains="gmail.com, zoho.com, proton.me">
+					<label for="email">Email</label>
+					<input id="email" name="email" type="email">
+				</email-suggestion>
+				<email-suggestion data-domains="gmail.com, zoho.com, proton.me" silent>
+					<label for="email2">Email2</label>
+					<input id="email2" name="email2" type="email">
+				</email-suggestion>
+				<button type="submit">Submit</button>
+			</form>
+			</div>
+		</main>
+		<script>
+			document.querySelector('form').addEventListener('submit', (event) => {
+				event.preventDefault();
+				alert(`email is ${new FormData(event.target).get('email')}`);
+				alert(`email2 is ${new FormData(event.target).get('email2')}`);
+			});
+		</script>
+	</body>
+</html>
