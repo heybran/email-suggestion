@@ -6,34 +6,41 @@
 		<meta name="description" content="">
 		<title>Email Suggestion web component</title>
 		<style>
+			body {
+				display: grid;
+				place-items: center;
+				font-size: 1.2rem;
+			}
+			main {
+				max-width: 50ch;
+				margin-inline: auto;
+				display: grid;
+				place-items: center;
+			}
+			h1, p {
+				text-align: center;
+			}
 		</style>
 		<script type="module" src="./email-suggestion.js"></script>
 	</head>
 	<body>
 		<header>
-			<h1>Email Suggestion component</h1>
+			<h1><code>email-suggestion</code> web component</h1>
 		</header>
 		<main>
 			<p>A web component to improves user experience by reducing typos and suggesting valid email addresses.</p>
-			<div class="demo-layout">
 			<form method="post">
-				<email-suggestion data-domains="gmail.com, zoho.com, proton.me">
+				<email-suggestion data-domains="GMAIL.com, zoho.com, proton.me" data-suggestion="It's possible your email is %email%?">
 					<label for="email">Email</label>
 					<input id="email" name="email" type="email">
 				</email-suggestion>
-				<email-suggestion data-domains="gmail.com, zoho.com, proton.me" silent>
-					<label for="email2">Email2</label>
-					<input id="email2" name="email2" type="email">
-				</email-suggestion>
 				<button type="submit">Submit</button>
 			</form>
-			</div>
 		</main>
 		<script>
 			document.querySelector('form').addEventListener('submit', (event) => {
 				event.preventDefault();
-				alert(`email is ${new FormData(event.target).get('email')}`);
-				alert(`email2 is ${new FormData(event.target).get('email2')}`);
+				alert(`Email submitted is ${new FormData(event.target).get('email')}`);
 			});
 		</script>
 	</body>
