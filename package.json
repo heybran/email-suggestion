@@ -1,7 +1,7 @@
 {
   "name": "email-suggestion",
   "version": "1.0.0",
-  "description": "A web component to improves user experience by reducing typos and suggesting valid email addresses.",
+  "description": "A web component to detect email domain typo and suggest correct email domain.",
   "main": "email-suggestion.js",
   "scripts": {
     "start": "npx http-server ."
