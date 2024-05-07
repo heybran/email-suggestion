@@ -129,5 +129,5 @@ export function suggestSimilarDomain(email, domains, threshold = 3) {
 		}
 	}
 
-	return closestDomain;
+	return closestDomain?.trim();
 }
